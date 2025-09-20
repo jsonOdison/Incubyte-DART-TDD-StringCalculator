@@ -20,4 +20,13 @@ void main() {
   test('custom delimiter returns sum', () {
     expect(Calculator().add('//;\n1;2'), 3);
   });
+  test('negative numbers throw exception with all negatives listed', () {
+    expect(
+      () => Calculator().add('1,-2,-5,3'),
+      throwsA(predicate((e) =>
+          e is ArgumentError &&
+          e.message.contains('-2') &&
+          e.message.contains('-5'))),
+    );
+  });
 }
