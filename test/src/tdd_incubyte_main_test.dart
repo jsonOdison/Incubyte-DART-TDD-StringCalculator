@@ -17,4 +17,7 @@ void main() {
   test('new line delimiter returns sum', () {
     expect(Calculator().add('1\n2,3'), 6);
   });
+  test('custom delimiter returns sum', () {
+    expect(Calculator().add('//;\n1;2'), 3);
+  });
 }
