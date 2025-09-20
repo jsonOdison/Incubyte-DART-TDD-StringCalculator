@@ -11,4 +11,7 @@ void main() {
   test('two numbers return sum', () {
     expect(Calculator().add('1,5'), 6);
   });
+  test('multiple numbers return sum', () {
+    expect(Calculator().add('1,2,3,4'), 10);
+  });
 }
