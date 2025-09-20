@@ -1,7 +1,8 @@
+import 'package:tdd_incubyte/src/tdd_incubyte_main.dart';
 import 'package:test/test.dart';
 
 void main() {
-  test('tdd incubyte main ...', () async {
-    // TODO: Implement test
+  test('empty string returns 0', () {
+    expect(Calculator().add(''), 0);
   });
 }
