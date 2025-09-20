@@ -8,4 +8,7 @@ void main() {
   test('single number returns same number', () {
     expect(Calculator().add('1'), 1);
   });
+  test('two numbers return sum', () {
+    expect(Calculator().add('1,5'), 6);
+  });
 }

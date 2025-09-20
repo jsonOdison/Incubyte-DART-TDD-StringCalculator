@@ -6,6 +6,7 @@ void main() {
 class Calculator {
   int add(String numbers) {
     if (numbers.isEmpty) return 0;
-    return int.parse(numbers);
+    var nums = numbers.split(',');
+    return nums.map(int.parse).reduce((a, b) => a + b);
   }
 }
