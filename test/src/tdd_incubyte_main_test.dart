@@ -14,4 +14,7 @@ void main() {
   test('multiple numbers return sum', () {
     expect(Calculator().add('1,2,3,4'), 10);
   });
+  test('new line delimiter returns sum', () {
+    expect(Calculator().add('1\n2,3'), 6);
+  });
 }
